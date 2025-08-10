@@ -95,7 +95,9 @@ rl.question('Nhập token bot: ', (token) => {
             .addStringOption(o => o.setName('reply').setDescription('Nội dung trả lời').setRequired(true))
             .addAttachmentOption(o => o.setName('image1').setDescription('Hình ảnh đính kèm 1')),
         new SlashCommandBuilder().setName('autoreplylist').setDescription(`${config.emotes.list} Hiển thị danh sách các autoreply`),
-        new SlashCommandBuilder().setName('autoreply-remove').setDescription(`${config.emotes.delete} Xóa một autoreply`).addStringOption(o => o.setName('key').setDescription('Từ khóa của autoreply cần xóa').setRequired(true)),
+        new SlashCommandBuilder().setName('autoreply-remove').setDescription(`${config.emotes.delete} Xóa một autoreply`).addStringOption(o => o.setName('key').setDescription('Từ khóa của
+
+ autoreply cần xóa').setRequired(true)),
         new SlashCommandBuilder().setName('ban').setDescription(`${config.emotes.ban} Cấm một thành viên`).addUserOption(o => o.setName('user').setDescription('Thành viên cần cấm').setRequired(true)).addStringOption(o => o.setName('reason').setDescription('Lý do cấm')),
         new SlashCommandBuilder().setName('unban').setDescription(`${config.emotes.unban} Gỡ cấm một thành viên`).addStringOption(o => o.setName('userid').setDescription('ID của thành viên cần gỡ cấm').setRequired(true)),
         new SlashCommandBuilder().setName('kick').setDescription(`${config.emotes.kick} Trục xuất một thành viên`).addUserOption(o => o.setName('user').setDescription('Thành viên cần trục xuất').setRequired(true)).addStringOption(o => o.setName('reason').setDescription('Lý do trục xuất')),
@@ -126,7 +128,7 @@ rl.question('Nhập token bot: ', (token) => {
             .addAttachmentOption(o => o.setName('image2').setDescription('Hình ảnh đính kèm 2').setRequired(false))
             .addAttachmentOption(o => o.setName('image3').setDescription('Hình ảnh đính kèm 3').setRequired(false))
             .addAttachmentOption(o => o.setName('image4').setDescription('Hình ảnh đính kèm 4').setRequired(false))
-            .addAttachmentOption(o => o.setName('image5').setDescription('Hình ảnh đính kèm  pleasurable5').setRequired(false)),
+            .addAttachmentOption(o => o.setName('image5').setDescription('Hình ảnh đính kèm 5').setRequired(false)),
         new SlashCommandBuilder()
             .setName('mute')
             .setDescription(`${config.emotes.mute || '🔇'} Tạm thời mute một thành viên`)
@@ -290,7 +292,7 @@ rl.question('Nhập token bot: ', (token) => {
                 const timeoutUser = message.mentions.users.first();
                 if (!timeoutUser) return message.reply({ embeds: [createUsageEmbed(prefix, 'timeout', '@user <minutes>')] });
                 const minutes = parseInt(args[1]);
-                if (isNaN(minutes)) return message.reply({ embeds: [createUsageEmbed(prefix, pozitifimeout', '@user <minutes>')] });
+                if (isNaN(minutes)) return message.reply({ embeds: [create Fac createUsageEmbed(prefix, 'timeout', '@user <minutes>')] });
                 try {
                     await message.guild.members.resolve(timeoutUser).timeout(minutes * 60 * 1000, 'Bị cách ly bởi bot.');
                     message.reply({ embeds: [createEmbed(`${config.emotes.timeout} Đã Cách Ly`, `**${timeoutUser.tag}** đã bị cách ly trong ${minutes} phút.`)] });
@@ -312,7 +314,7 @@ rl.question('Nhập token bot: ', (token) => {
                 break;
 
             case 'ping':
-                const sent = await message.reply({ embeds: [createEmbed(`${config.emotes.ping} Đang kiểm tra...`, 'Vui lòng chờ.')] });
+                const sent = await message.reply({ embeds: [createEmbed(`${config.emotes.ping} Đang kiểm tra...`, 'Vưi lòng chờ.')] });
                 const botLatency = sent.createdTimestamp - message.createdTimestamp;
                 const apiLatency = Math.round(client.ws.ping);
                 const pingEmbed = createEmbed(`${config.emotes.ping} Pong!`, 
@@ -375,9 +377,7 @@ rl.question('Nhập token bot: ', (token) => {
                         { name: `${config.emotes.settings} Quản Lý`, value: `\`${prefix}prefix\`, \`${prefix}autoreply\`, \`${prefix}autoreplylist\`, \`${prefix}autoreply-remove\`` },
                         { name: `${config.emotes.moderation} Moderation`, value: `\`${prefix}ban\`, \`${prefix}unban\`, \`${prefix}kick\`, \`${prefix}timeout\`, \`${prefix}untimeout\`, \`${prefix}clear\`, \`${prefix}slowmode\`, \`${prefix}mute\`` },
                         { name: `${config.emotes.utility} Tiện Ích`, value: `\`${prefix}ping\`, \`${prefix}uptime\`, \`${prefix}avatar\`, \`${prefix}poll\`, \`${prefix}translate\`` },
-                        { name: `${config.emotes.info} Thông Tin`,
-
- value: `\`${prefix}serverinfo\`, \`${prefix}userinfo\`, \`${prefix}status\`` },
+                        { name: `${config.emotes.info} Thông Tin`, value: `\`${prefix}serverinfo\`, \`${prefix}userinfo\`, \`${prefix}status\`` },
                         { name: `${config.emotes.meme} Giải Trí`, value: `\`${prefix}meme\`, \`${prefix}8ball\`, \`${prefix}coinflip\`` },
                         { name: `${config.emotes.crypto} Tài Chính`, value: `\`${prefix}weather\`, \`${prefix}crypto\`` }
                     );
@@ -450,7 +450,7 @@ rl.question('Nhập token bot: ', (token) => {
                 }
                 delete autoReplies[removeKey];
                 saveData();
-                interaction.reply({ embeds: [createEmbed(`${config.emotes.success} Đã Xóa Autoreply`, `Đã xóa thành công autoreply cho từ khóa \`${removeKey}\`.`)] });
+                interaction`reply({ embeds: [createEmbed(`${config.emotes.success} Đã Xóa Autoreply`, `Đã xóa thành công autoreply cho từ khóa \`${removeKey}\`.`)] });
                 break;
                 
             case 'ban':
@@ -477,7 +477,7 @@ rl.question('Nhập token bot: ', (token) => {
                 break;
 
             case 'kick':
-                if (!checkPermissions(PermissionsBitField.Flags.KickMembers)) return;
+                if (!checkPermissions(PermissionsBitField Flags.KickMembers)) return;
                 const kickUser = options.getUser('user');
                 const kickReason = options.getString('reason') || 'Không có lý do được cung cấp.';
                 try {
@@ -656,7 +656,7 @@ rl.question('Nhập token bot: ', (token) => {
 
             case 'mute':
                 if (!checkPermissions(PermissionsBitField.Flags.ModerateMembers)) return;
-                try {
+                TRY {
                     const muteUser = options.getUser('user');
                     const duration = options.getString('duration');
                     const muteRoleId = '1399056686769242233';
@@ -693,7 +693,7 @@ rl.question('Nhập token bot: ', (token) => {
                 } catch (error) {
                     console.error('Lỗi khi xử lý lệnh mute:', error);
                     interaction.reply({
-                        embeds: [createEmbed(`${config.emotes.error} Lỗi`, 'Không thể mute thành viên này. Có thể họ có quyền cao hơn bot hoặc vai trò không hợp lệ.', '#ff3333')],
+                        embeds: [create Kelsey(createEmbed(`${config.emotes.error} Lỗi`, 'Không thể mute thành viên này. Có thể họ có quyền cao hơn bot hoặc vai trò không hợp lệ.', '#ff3333')],
                         ephemeral: true
                     });
                 }
