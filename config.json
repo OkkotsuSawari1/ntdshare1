@@ -1,0 +1,70 @@
+{
+  "token": "MTM3NjA5MTgzNzU2NzIwOTUzMg.GNS6BN.YJQfBKYugL6n3YB87U5DzKxE3ER9ZVje2G22rs",
+  "clientId": "1376091837567209532",
+  "clientSecret": "vdo7AkvaayMOxVC5eR7Hfxk_eJDUZHdh",
+  "ownerId": "1086605648906682405",
+  "adminId": "1324753828179873802",
+  "defaultPrefix": "ntd!",
+  "embedColor": "#00ff88",
+  "feedbackChannelId": "1375449830222205039",
+  "allowedLinkRoles": [],
+  "embedDesign": {
+    "useQuote": true
+  },
+  "emotes": {
+    "success": "✅",
+    "error": "❌", 
+    "info": "ℹ️",
+    "warning": "⚠️",
+    "help": "❓",
+    "settings": "⚙️",
+    "reply": "💬",
+    "list": "📋",
+    "delete": "🗑️",
+    "ban": "🔨",
+    "unban": "🔓",
+    "kick": "👢",
+    "timeout": "⏰",
+    "untimeout": "🔄",
+    "feedback": "📝",
+    "tts": "🔊",
+    "ping": "🏓",
+    "uptime": "⏱️",
+    "online": "🟢",
+    "latency": "📡",
+    "api": "🌐",
+    "moderation": "🛡️",
+    "utility": "🔧",
+    "server": "🌐",
+    "user": "👤",
+    "status": "📊",
+    "clear": "🧹",
+    "slowmode": "🐢",
+    "avatar": "🖼️",
+    "poll": "📊",
+    "translate": "🌐",
+    "meme": "😂",
+    "8ball": "🎱",
+    "coinflip": "🪙",
+    "weather": "🌦️",
+    "crypto": "📈"
+  },
+  
+  "buttons": {
+    "getKey": {
+      "emote": "<a:_balistic_info_:1377928576648745000>",
+      "url": "https://bio.link/ntdshare"
+    },
+    "shopKey": {
+      "emote": "<a:coco:1377915801616781394>",
+      "url": "https://ntdsharehax.top/"
+    },
+    "discordAdmin": {
+      "emote": "<a:Doggodance:1377917308495728670>"
+    },
+    "zaloAdmin": {
+      "emote": "<a:trolldance:1377915271167082616>",
+      "url": "http://zaloapp.com/qr/p/12krkc66bpeb3"
+    }
+  }
+}
