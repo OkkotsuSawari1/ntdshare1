@@ -84,7 +84,7 @@ const commands = [
     new SlashCommandBuilder().setName('autoreply').setDescription(`${config.emotes.reply} Tạo hoặc chỉnh sửa một autoreply`)
         .addStringOption(o => o.setName('key').setDescription('Từ khóa kích hoạt').setRequired(true))
         .addStringOption(o => o.setName('reply').setDescription('Nội dung trả lời').setRequired(true))
-        .addAttachmentOption(o => o.setName('image1').setDescription('Hình ảnh đính kèm 1')),
+        .addAttachmentOption(o => o.setName('image1').setDescription('Hình ảnh đính kèm 1').setRequired(true)),
     new SlashCommandBuilder().setName('autoreplylist').setDescription(`${config.emotes.list} Hiển thị danh sách các autoreply`),
     new SlashCommandBuilder().setName('autoreply-remove').setDescription(`${config.emotes.delete} Xóa một autoreply`).addStringOption(o => o.setName('key').setDescription('Từ khóa của autoreply cần xóa').setRequired(true)),
     new SlashCommandBuilder().setName('ban').setDescription(`${config.emotes.ban} Cấm một thành viên`).addUserOption(o => o.setName('user').setDescription('Thành viên cần cấm').setRequired(true)).addStringOption(o => o.setName('reason').setDescription('Lý do cấm')),
@@ -113,7 +113,7 @@ const commands = [
         .setName('feedback')
         .setDescription(`${config.emotes.feedback || '📝'} Gửi phản hồi với nhận xét và hình ảnh`)
         .addStringOption(o => o.setName('comment').setDescription('Nhận xét của bạn').setRequired(true))
-        .addAttachmentOption(o => o.setName('image1').setDescription('Hình ảnh đính kèm 1').setRequired(false))
+        .addAttachmentOption(o => o.setName('image1').setDescription('Hình ảnh đính kèm 1').setRequired(true))
         .addAttachmentOption(o => o.setName('image2').setDescription('Hình ảnh đính kèm 2').setRequired(false))
         .addAttachmentOption(o => o.setName('image3').setDescription('Hình ảnh đính kèm 3').setRequired(false))
         .addAttachmentOption(o => o.setName('image4').setDescription('Hình ảnh đính kèm 4').setRequired(false))
